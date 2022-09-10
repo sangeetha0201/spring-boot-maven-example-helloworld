@@ -1,9 +1,9 @@
 pipeline {
-    agent { label 'ubuntuslave1' }
+    agent any
     stages {
         stage('maven built'){
             steps{
-                sh 'mvn clean install package'
+                sh 'mvn clean install'
             }
         }
         stage('print'){
