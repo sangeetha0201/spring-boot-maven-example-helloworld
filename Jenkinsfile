@@ -3,19 +3,8 @@ pipeline {
     stages {
         stage('maven built'){
             steps{
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
-        stage('print'){
-            steps{
-                echo "welcome "
-            }
-        }
-            stage('compile'){
-                steps{
-                    sh 'pwd'
-                }
-            }
-
         }
     }
